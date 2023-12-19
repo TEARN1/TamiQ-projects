@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+    .contaiiner {
+        width: 100%;
+        height: 100%;
+        background-color: coral;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup {
+        width: 400px;
+        background-color: crimson;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50% , -50%) scale(0.1);
+        text-align: center;
+        padding: 30px;
+        visibility: hidden;
+        transition: transform 1s, top 1s;
+    }
+    .open-popup {
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50% , -50%) scale(1);
+    }
+    .popup button {
+        padding: 10px;
+    }
+    .btn {
+        background-color: black;
+        color: white;
+        padding: 10px 60px;
+    }
+
+</style>
+
+<body>
+<div class="contaiiner"> 
+    <button onclick="openPopup()" type="submit"  class="btn">
+        submit
+    </button>
+    <div class="popup" id="popup" >
+        <h1>ASemahle Nkwali <br>
+        Complete</h1>
+        <button onclick="closePopup()" >Okay</button>
+    </div>
+</div>
+<script>
+    let popup = document.getElementById("popup")
+
+    function openPopup() {
+        popup.classList.add("open-popup")
+    }
+    function closePopup() {
+        popup.classList.remove("open-popup")
+    }
+</script>
+</body>
+<script>
+
+</script>
+</html>
